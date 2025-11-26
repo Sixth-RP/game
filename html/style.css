@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#radar-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.radar-panel {
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    border: 3px solid #4a4a4a;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), inset 0 2px 8px rgba(255, 255, 255, 0.1);
+    min-width: 600px;
+}
+
+.radar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+.header-item {
+    display: flex;
+    gap: 10px;
+}
+
+.label {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 3px;
+    background: #2a2a2a;
+    color: #666;
+}
+
+.label.same {
+    color: #ffcc00;
+}
+
+.label.opp {
+    color: #00ccff;
+}
+
+.label.xmit {
+    color: #ff3333;
+}
+
+.label.fast {
+    color: #00ff00;
+}
+
+.radar-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.speed-section {
+    flex: 1;
+    text-align: center;
+}
+
+.speed-display {
+    font-size: 72px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+    background: #000;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+    border: 2px solid #003300;
+}
+
+.speed-display.locked {
+    color: #ff3333;
+    text-shadow: 0 0 20px #ff3333, 0 0 30px #ff3333;
+    border-color: #330000;
+}
+
+.speed-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.plate-display {
+    background: #000;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
+
+.plate-label {
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.plate-box {
+    background: #fff;
+    color: #000;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 2px solid #333;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location {
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.divider {
+    width: 2px;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, #4a4a4a, transparent);
+}
+
+.patrol-section {
+    flex: 0.8;
+    text-align: center;
+}
+
+.patrol-display {
+    font-size: 56px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+    text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+    background: #000;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+    border: 2px solid #003300;
+}
+
+.patrol-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* Animation for speed changes */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+    }
+    50% {
+        text-shadow: 0 0 30px currentColor, 0 0 50px currentColor;
+    }
+}
+
+.speed-display.active {
+    animation: pulse 1s infinite;
+}

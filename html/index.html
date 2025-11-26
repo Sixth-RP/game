@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Radar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="radar-container" class="hidden">
+        <div class="radar-panel">
+            <div class="radar-header">
+                <div class="header-item">
+                    <span class="label same">SAME</span>
+                    <span class="label opp">OPP</span>
+                    <span class="label xmit">XMIT</span>
+                </div>
+                <div class="header-item">
+                    <span class="label fast">FAST</span>
+                </div>
+                <div class="header-item">
+                    <span class="label same">SAME</span>
+                    <span class="label opp">OPP</span>
+                    <span class="label xmit">XMIT</span>
+                </div>
+                <div class="header-item">
+                    <span class="label fast">FAST</span>
+                </div>
+            </div>
+
+            <div class="radar-display">
+                <div class="speed-section">
+                    <div class="speed-display" id="front-speed">025</div>
+                    <div class="speed-label">FRONT</div>
+                    <div class="plate-display">
+                        <div class="plate-label">FOR</div>
+                        <div class="plate-box" id="front-plate">61HSF360</div>
+                        <div class="location">FRONT</div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="speed-section">
+                    <div class="speed-display" id="rear-speed">025</div>
+                    <div class="speed-label">REAR</div>
+                    <div class="plate-display">
+                        <div class="plate-label">FOR</div>
+                        <div class="plate-box" id="rear-plate">61HSF360</div>
+                        <div class="location">REAR</div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="patrol-section">
+                    <div class="patrol-display" id="patrol-speed">000</div>
+                    <div class="patrol-label">PATROL SPEED</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
